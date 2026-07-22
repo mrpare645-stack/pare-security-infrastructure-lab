@@ -230,3 +230,8 @@ Spécialisation :
 
 GitHub :
 https://github.com/mrpare645-stack
+## 📚 Documentation Phase 1
+
+- [Jour 1 — Initialisation du projet](docs/phase1/jour1.md)
+- [Jour 2 — Structure et documentation](docs/phase1/jour2.md)
+- [Jour 3 — Déploiement pfSense avec VMware](docs/phase1/jour3.md)
