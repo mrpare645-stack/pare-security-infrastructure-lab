@@ -1,1 +1,58 @@
+# PSIL – Phase 1 – Jour 6
+
+## Structuration d'Active Directory avec des Unités Organisationnelles (OU)
+
+### Objectif
+
+L'objectif de cette étape était de structurer le domaine Active Directory en créant des unités organisationnelles (OU) représentant les différents services de l'entreprise GSIMEL. Cette organisation facilite l'administration des utilisateurs, des groupes, des ordinateurs et l'application future des stratégies de groupe (GPO).
+
+### Environnement
+
+* Système : Windows Server 2022
+* Rôle installé : Active Directory Domain Services (AD DS)
+* Domaine : **GSIMEL.com**
+* Outils utilisés :
+
+  * Active Directory Users and Computers (ADUC)
+  * Windows PowerShell (module Active Directory)
+
+### Réalisation
+
+Les opérations suivantes ont été effectuées :
+
+* Ouverture de la console **Active Directory Users and Computers**.
+* Création de l'unité organisationnelle **GSIMEL_Reseau**.
+* Création de l'unité organisationnelle **GSIMEL_Securite**.
+* Vérification de l'arborescence dans la console ADUC.
+* Vérification des objets créés avec PowerShell.
+
+### Commande de vérification
+
+```powershell
+Get-ADOrganizationalUnit -Filter *
+```
+
+### Résultat obtenu
+
+```
+Name                  DistinguishedName
+----                  -----------------
+Domain Controllers    OU=Domain Controllers,DC=GSIMEL,DC=com
+GSIMEL_Reseau         OU=GSIMEL_Reseau,DC=GSIMEL,DC=com
+GSIMEL_Securite       OU=GSIMEL_Securite,DC=GSIMEL,DC=com
+```
+
+### Analyse
+
+Les résultats montrent que les deux unités organisationnelles ont été créées avec succès et sont directement rattachées au domaine **GSIMEL.com**. La structure est conforme aux exigences de l'exercice et constitue une base solide pour l'administration des ressources de l'entreprise.
+
+### Conclusion
+
+L'organisation initiale de l'annuaire Active Directory est désormais en place. Les prochaines étapes consisteront à créer des utilisateurs, des groupes de sécurité, à les placer dans les unités organisationnelles appropriées et à appliquer des stratégies de groupe (GPO) afin d'automatiser la gestion du domaine.
+
+### Captures d'écran à ajouter
+
+* Console Active Directory Users and Computers montrant les deux OU.
+* Résultat de la commande `Get-ADOrganizationalUnit -Filter *`.
+* Vue complète de l'arborescence du domaine.
 
